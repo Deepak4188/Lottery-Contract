@@ -5,6 +5,11 @@ contract Lottery {
     address payable public manager;
     address[] public players;
 
+    modifier restricted() {
+        require(msg.sender == manager);
+        _;
+    }
+
     constructor() {
         manager = payable(msg.sender);
     }
@@ -34,10 +39,5 @@ contract Lottery {
 
     function getPlayers() public view returns (address[] memory) {
         return players;
-    }
-
-    modifier restricted() {
-        require(msg.sender == manager);
-        _;
     }
 }
