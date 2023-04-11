@@ -4,8 +4,8 @@ const { abi, bytecode } = require("./compile.js");
 
 
 const provider = new HDWalletProvider(
-  "tissue fitness october before alcohol chase know brother oak brain damage april", // Recovery phrase (Mnemonics) for metamask
-  "https://goerli.infura.io/v3/90ea687eba104a70b9662e7257d3b4a7" // infura API Goerli Ethereum test network link
+  // Recovery phrase (Mnemonics) for metamask
+  // infura API Goerli Ethereum test network link
 );
 
 const web3 = new Web3(provider);
